@@ -42,7 +42,7 @@ mygiis.config(["$routeProvider", function ($routeProvider) {
                 when("/home", {
                     templateUrl: "template/home.html",
                     controller: "home"
-                }).
+                }).//--Rpofile
                 when("/view_Profile", {
                     templateUrl: "template/profile/view_Profile.html",
                     controller: "view_Profile"
@@ -54,7 +54,7 @@ mygiis.config(["$routeProvider", function ($routeProvider) {
                 when("/feedback", {
                     templateUrl: "template/profile/feedback.html",
                     controller: "feedback"
-                }).
+                }).//--School
                 when("/fees_Payment_History", {
                     templateUrl: "template/school/fees_Payment_History.html",
                     controller: "fees_Payment_History"
@@ -70,7 +70,7 @@ mygiis.config(["$routeProvider", function ($routeProvider) {
                 when("/calender", {
                     templateUrl: "template/school/calender.html",
                     controller: "giis_Directory"
-                }).
+                }).//--Academic
                 when("/list_of_Syllabus", {
                     templateUrl: "template/academics/list_of_Syllabus.html",
                     controller: "list_of_Syllabus"
@@ -82,7 +82,7 @@ mygiis.config(["$routeProvider", function ($routeProvider) {
                 when("/view_result", {
                     templateUrl: "template/academics/view_result.html",
                     controller: "view_result"
-                }).
+                }).//--Write To Us ( Messaging )
                 when("/inbox_Parent", {
                     templateUrl: "template/write_To_Us/messaging/inbox_Parent.html",
                     controller: "inbox_Parent"
