@@ -1,4 +1,3 @@
-
 //--GLOBAL--
 
 var index_controller;
