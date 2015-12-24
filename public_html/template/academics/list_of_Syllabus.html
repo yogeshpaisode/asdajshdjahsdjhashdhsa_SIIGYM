@@ -1,0 +1,107 @@
+  <div class="row template_pages">
+            <section class="col-xs-12 text-right">
+                <h5>View Information For : 
+                    <select>
+                        <option>Child 1</option>
+                        <option>Child 2</option>
+                    </select>
+                </h5>
+            </section>
+
+            <section class="col-xs-12">
+                <h3>Syllabus For 2015-2016</h3>
+            </section>
+            <section class="col-md-12"><hr></section>
+
+            <section class="col-xs-12 text-right">
+                <button class="btn btn-warning btn-xs" id="hide_button">Hide Search</button>
+            </section>
+
+            <section class="col-xs-12" id="search_syllabus">
+
+                <div class="">
+                    <div class = "panel panel-default">
+                        <div class = "panel-heading">
+                            <h3 class = "panel-title">
+                                Search Syllabus
+                            </h3>
+                        </div><!--End of Panel Heading-->
+
+                        <div class = "panel-body">
+
+                            <div class="">
+                                <div class="col-xs-6">Title :</div>
+                                <div class="col-xs-6"><input type="text" style="width: 100%" data-role="none"/></div>
+
+                                <div class="col-xs-6">Posted Date :</div>
+                                <div class="col-xs-6"><input type="text" style="width: 100%" data-role="none"/></div>
+
+                                <div class="col-xs-6">Subject :</div>
+                                <div class="col-xs-6"><input type="text" style="width: 100%" data-role="none"/></div>
+                                <div class="col-xs-12 search_adjust"><button class="btn btn-xs btn-warning">Search</button> <button class="btn btn-xs btn-warning">View All</button></div>
+
+                            </div><!--End of Row-->
+
+                        </div><!--End of Panel-Body-->
+                    </div><!--End of Panel-->
+                </div><!--End of Row-->
+
+            </section><!--End of Col- 12-->
+
+
+            <section class="col-xs-12">
+                <table class = "table table-bordered">
+
+                    <thead>
+                        <tr class="primary">
+                            <th>Title</th>
+                            <th>Documents</th>
+                            <th>Subject</th>
+                            <th>Semester</th>
+                            <th>Date 
+                                <select>
+                                    <option>2012-2013</option>
+                                    <option>2013-2014</option>
+                                    <option>2014-2015</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>ITACP_1</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>Information and Co..</td>
+                            <td>1</td>
+                            <td>13 Apr 2015</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 6 CBSC Language</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>Hindi as Second Language..</td>
+                            <td>1</td>
+                            <td>15 Mar 2015</td>
+                        </tr>
+                        <tr>
+                            <td>ACP-6CBSCi-Yoga-2015</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>Yoga and Science</td>
+                            <td>1</td>
+                            <td>27 Jun 2015</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </section><!--end of Table-->
+
+
+        </div>
+
+        <script>
+            $("#hide_button").click(function () {
+                $("#search_syllabus").slideToggle("slow");
+                $(this).html(($(this).text() == "Hide Search" ? "Show Search" : "Hide Search"));
+            });
+
+        </script>

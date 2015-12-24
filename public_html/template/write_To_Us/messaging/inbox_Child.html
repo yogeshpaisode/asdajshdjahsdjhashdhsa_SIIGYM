@@ -1,0 +1,79 @@
+   <div class="row template_pages">
+
+            <section class="col-md-12 col-xs-12">
+                <div class="row bk_color">
+                    <div class="col-md-2 col-xs-3"><button class="btn btn-xs btn-warning" data-role="none" id="inbox_child_show_all_message"><span class = "glyphicon glyphicon-envelope"></span> Inbox</button></div>
+                    <div class="col-md-9 col-xs-7 text-center">INBOX ( Child )</div>
+                    <div class="col-md-1 col-xs-2 text-right"> <button class="btn btn-xs btn-warning" data-role="none"><span class = "glyphicon glyphicon-paperclip"></span></button></div>
+                </div>
+            </section>
+
+            <section class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">From:</div><!--End of COL-->   
+                    <div class="col-md-10 col-xs-8">GIIS Announcements , IT Administrator , GIIS ADMIN</div><!--End of COL-->   
+                    <div class="col-xs-2 text-right" id="toggle_child_detail"><a>Details</a></div><!--End of COL-->   
+                </div><!--end of ROW ( Email From )-->
+            </section><!--End of COL (From Sender Info)-->
+
+
+            <section id = "child_detail" class="col-md-12 col-xs-12">
+
+                <div class="row">
+
+                    <div class="col-md-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-1 col-xs-2">To : </div><!--End of COL-->   
+                            <div class="col-md-11 col-xs-10">GIIS Announcements , IT Administrator</div><!--End of COL-->   
+                        </div><!--end of ROW ( Email TO )-->
+                    </div><!--End of COL (From Receiver Info)-->
+
+                    <div class="col-md-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-1 col-xs-2">Cc : </div><!--End of COL-->   
+                            <div class="col-md-11 col-xs-10">GIIS ADMIN</div><!--End of COL-->   
+                        </div><!--end of ROW ( Email CC )-->
+                    </div><!--End of COL (From Receiver Info)-->
+
+                </div><!--End of ROW-->
+
+            </section><!--End of id="detail"-->
+
+
+
+            <section class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-10 col-xs-8"><h4>Invitation for Thyagaraja Aradhana 2016</h4></div><!--End of COL-->
+                    <div class="col-md-2 col-xs-4 text-right email_subject_Date">2 Dec 2015</div><!--End of COL-->
+                </div><!--end of ROW ( Email Subject )-->
+            </section><!--End of COL ( Email Subjects )-->
+
+
+            <section class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">Email Message:</div><!--End of COL-->   
+                    <div class="col-md-12 col-xs-12">Sample Email..</div><!--End of COL-->   
+                </div><!--end of ROW ( Email Message )-->
+            </section><!--End of COL-->
+
+        </div><!--End of Main ROW-->
+
+
+        <script>
+
+            $(document).ready(function () {
+                $("#child_detail").hide();
+                //$("#inbox_Child_Panel").panel("open");
+            });
+
+            $("#toggle_child_detail").click(function () {
+                var this_ref = $(this);
+                $("#child_detail").slideToggle("slow");
+                this_ref.html("<a>" + (this_ref.text() == "Details" ? "Hide" : "Details") + "</a>");
+            });
+
+            $("#inbox_child_show_all_message").click(function () {
+                $("#inbox_Child_Panel").panel("toggle");
+            });
+
+        </script>

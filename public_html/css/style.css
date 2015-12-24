@@ -1,0 +1,138 @@
+/*--change_page--*/
+.ui-page {
+    //background-image:url('../img/v_bar.png');
+}
+a{
+    text-decoration: none;
+}
+.border-style{
+    border-bottom-style:solid;
+    border-bottom-color: gray;
+}
+
+.bk{
+    background-color: gray;
+}
+
+.panel{
+  
+}
+
+.alert{
+    margin: 1px;
+}
+
+/*--inbox-Parent.html,inbox-child.html common--*/
+.panel_edit_button{
+    margin-top: -6px;
+}
+#toggle-detail{
+    right: 18px;
+}
+
+.email_subject_Date{
+    top:13px; right: 10px;
+}
+
+
+/*--inbox-Parent.html--*/
+.edit_button_panel{
+    top: -16px;
+}
+
+/*--inbox-Child.html--*/
+
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}/*--Remove Paading of GRID System in Bootstrap--*/
+
+.index_Menu_verticle,.index_quick_links,.index_menu_up{
+    position: fixed;
+    /*background-color: white;*/
+}/*--Common Style for Left Verticle Menu item's'--*/
+
+.index_menu_up{
+    top: 0px;
+}/*--UP Menu's Position'--*/
+
+.index_quick_links {
+    bottom: 0px;
+}/*--Quick Link Position--*/
+
+
+.index_verticle_menu_icon_img{
+    margin-left: 18px;
+}
+/*---------------------End of LEFT VERTICLE MENU---------------------*/
+
+.index_horizontal_header{
+    background-color:lightskyblue;
+    position: fixed;
+    width: 100%;
+    height: 44px;
+    z-index: 100;
+}
+.index_header_three_bars{
+    width: 22px;
+    height: 22px;
+}
+.index_header_logo{
+    width: 176px;
+    height: 22px;
+}
+.img_Header_Branding{
+    width: 100%;
+    height: 5px;
+    top:-11px;
+}
+
+/*---Other---*/
+
+.ng_view_style{
+    background-color: whitesmoke; 
+    top:28px;
+    left: -14px;
+}
+
+
+
+.thumb{
+    width: 115px;
+    height: 115px;
+}
+.carousel_verticle_img{
+    width: 40px;
+    height: 144px;
+}
+.carousel_cust{
+    margin-right: 100px;
+}
+
+.carousel_alert_cust{
+    margin-left: 14px;
+}
+
+.trace_area{
+    background-color: white;
+}
+
+.carousel_image_video{}
+
+.announcements{
+    position: fixed; 
+    bottom: 0px;
+}
+
+.achievements_Compliments_table{
+    margin-top: 20px; 
+    margin-bottom: 30px;
+}
+
+.template_pages{
+    margin-top: 26px;
+}
+
+
+

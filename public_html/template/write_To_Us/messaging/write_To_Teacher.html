@@ -1,0 +1,89 @@
+<div class="row template_pages">
+
+    <section class="col-md-12 col-xs-12">
+        <div class="row bk_color">
+            <div class="col-md-2 col-xs-3"><button class="btn btn-xs btn-warning" data-role="none"><span class = "glyphicon glyphicon-remove"></span> Cancel</button></div>
+            <div class="col-md-8 col-xs-6 text-center">Write To Teacher</div>
+            <div class="col-md-1 col-xs-1 text-right"> <button class="btn btn-xs btn-warning" data-role="none"><span class = "glyphicon glyphicon-paperclip"></span></button></div>
+            <div class="col-md-1 col-xs-2 text-right"> <button class="btn btn-xs btn-warning" data-role="none"><span class = "glyphicon glyphicon-send"></span>  Send</button></div>  
+        </div>
+    </section>
+
+    <section class="col-md-12 col-xs-12">
+
+        <div class="row">
+
+            <div class="col-md-12 col-xs-12 text-right">
+                Select Child:
+                <select data-role="none" id="select_child">
+                    <option>Child-1</option>
+                    <option>Child-2</option>
+                    <option>Child-3</option>
+                    <option>Child-4</option>
+                </select>
+            </div><!--End of COL (Select Child)-->
+
+
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">To : </div><!--End of COL-->   
+                    <div class="col-md-11 col-xs-10"><input type="text" data-role="none" style="width:100%;"/></div><!--End of COL-->   
+                </div><!--end of ROW ( Email TO )-->
+            </div><!--End of COL (From Receiver Info)-->
+
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">Cc : </div><!--End of COL-->   
+                    <div class="col-md-11 col-xs-10"><input type="text" data-role="none" style="width:100%;"/></div><!--End of COL-->   
+                </div><!--end of ROW ( Email Cc )-->
+            </div><!--End of COL ( Cc Receiver Info)-->
+
+
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 col-xs-2">Subject: </div><!--End of COL-->   
+                    <div class="col-md-11 col-xs-10"><input type="text" data-role="none" style="width:100%;"/></div><!--End of COL-->   
+                </div><!--end of ROW ( Subject )-->
+            </div><!--End of COL (Subject)-->
+
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 col-xs-3"><h4>Child Reference:</h4></div><!--End of COL-->   
+                    <div class="col-md-11 col-xs-9"><h4 id="child_reference"></h4></div><!--End of COL-->   
+                </div><!--end of ROW ( Subject )-->
+            </div><!--End of COL (Subject)-->
+
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-1 col-xs-3">Attachment: </div><!--End of COL-->   
+                    <div class="col-md-11 col-xs-9">one,two,three</div><!--End of COL-->   
+                </div><!--end of ROW ( Subject )-->
+            </div><!--End of COL (Subject)-->
+
+            <div class="col-md-12 col-xs-12">
+                <textarea data-role="none" style="width:100%;"></textarea>
+            </div><!--End of COL (Subject)-->
+
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12"><input type="checkbox" data-role="none"/> Request a Read Receipt for this Message</div><!--End of COL-->   
+                    <div class="col-md-4 col-xs-12"><input type="checkbox" data-role="none"/> Save Outgoing Mail</div><!--End of COL-->   
+                    <div class="col-md-4 col-xs-12"><input type="checkbox" data-role="none"/> Send to Class Teacher</div><!--End of COL-->   
+                </div><!--end of ROW ( Subject )-->
+            </div><!--End of COL (Subject)-->
+
+
+        </div><!--End of ROW-->
+
+    </section><!--End of id="detail"-->
+
+</div><!--End of Main ROW-->
+
+
+<script>
+
+    $("#select_child").change(function () {
+        $("#child_reference").html($("#select_child").val());
+    });
+
+</script>

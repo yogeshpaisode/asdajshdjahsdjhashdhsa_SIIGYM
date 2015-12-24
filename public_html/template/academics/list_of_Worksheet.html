@@ -1,0 +1,121 @@
+  <div class="row template_pages">
+            <section class="col-xs-12 text-right">
+                <h5>View Information For : 
+                    <select>
+                        <option>Child 1</option>
+                        <option>Child 2</option>
+                    </select>
+                </h5>
+            </section>
+
+            <section class="col-xs-12">
+                <h3>List of Worksheets</h3>
+            </section>
+          
+            <section class="col-xs-12"><hr></section>
+
+            <section class="col-xs-12 text-right"><button class="btn btn-warning btn-xs" id="hide_button">Hide Search</button></section>
+
+            <section class="col-xs-12">
+                <div class="">
+                    <div class = "panel panel-default">
+                        <div class = "panel-heading">
+                            <h3 class = "panel-title">
+                                Search Worksheets
+                            </h3>
+                        </div><!--End of Panel Heading-->
+
+                        <div class = "panel-body" id="search_Worksheet">
+
+                            <div class="">
+                                <div class="col-xs-6">Select Subject :</div>
+                                <div class="col-xs-6">
+                                    <select data-role="none">
+                                        <option>Subject 1</option>
+                                        <option>Subject 2</option>
+                                        <option>Subject 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-6">Issue Date :</div>
+                                <div class="col-xs-6"><input type="text" style="width: 100%" data-role="none"/></div>
+
+                                <div class="col-xs-6">Title :</div>
+                                <div class="col-xs-6"><input type="text" style="width: 100%" data-role="none"/></div>
+                                <div class="col-xs-12 search_adjust"><button class="btn btn-xs btn-warning">Search</button> <button class="btn btn-xs btn-warning">View All</button></div>
+
+                            </div><!--End of Row-->
+
+                        </div><!--End of Panel-Body-->
+                    </div><!--End of Panel-->
+                </div><!--End of ROW-->
+            </section><!--End of Col- 12-->
+
+
+            <section class="col-xs-12">
+                <table class = "table table-bordered table-hover">
+
+                    <thead>
+                        <tr class="primary">
+                            <th>Title</th>
+                            <th>Documents</th>
+                            <th>Filing No.</th>
+                            <th>Subject</th>
+                            <th>Issue Date 
+                                <select>
+                                    <option>2012-2013</option>
+                                    <option>2013-2014</option>
+                                    <option>2014-2015</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>CT-3-Revision</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>6SCI0122</td>
+                            <td>Language</td>
+                            <td>13 Apr 2015</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 1 to 3</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>7TCI0122</td>
+                            <td>H/T/F</td>
+                            <td>15 May 2015</td>
+                        </tr>
+
+                        <tr>
+                            <td>Class 6 Hindi</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>6SCI0122</td>
+                            <td>Social Science</td>
+                            <td>13 Jun 2015</td>
+                        </tr>
+
+                        <tr>
+                            <td>Man In The Stone Age</td>
+                            <td><button class="btn btn-xs btn-warning">Attachment</button></td>
+                            <td>6S0I0122</td>
+                            <td>Social Science</td>
+                            <td>13 Aug 2015</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </section><!--end of Table-->
+
+
+        </div>
+
+        <script>
+            $("#hide_button").click(function () {
+                $("#search_Worksheet").slideToggle("slow");
+                $(this).html(($(this).text() == "Hide Search" ? "Show Search" : "Hide Search"));
+            });
+
+        </script>

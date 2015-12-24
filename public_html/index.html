@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <!--meta name="msapplication-tap-highlight" content="no"-->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            // DISABLE JQM ROUTER
+            $(document).bind("mobileinit", function () {
+                $.mobile.ajaxEnabled = false;
+                $.mobile.linkBindingEnabled = false;
+                $.mobile.hashListeningEnabled = false;
+                $.mobile.pushStateEnabled = false;
+                $.mobile.changePage.defaults.changeHash = false;
+            });
+        </script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/angular-animate.js"></script>
+        <script src="js/XML2JSON.js"></script>
+
+    </head>
+
+    <body ng-app="mygiis" ng-controller="index_controller">
+
+        <!--Handle All Panel-->
+
+        <section data-role="panel" id="profile_Panel" data-position="left" data-display="push" class="carousel_image_video">
+            <h2 class = "text-danger">PROFILE</h2>
+            <hr>
+            <a href="#view_Profile"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;View/Edit Info</h5></a>
+            <hr>
+            <a href="#edit_login_information"><h5 id="edit-login-information"><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Edit Login Info</h5></a>
+            <hr>
+            <a href="#feedback"><h5 id="feedback"><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;App Feedback</h5></a>
+        </section><!-- Profile panel -->
+
+        <section data-role="panel" id="school_Panel" data-position="left" data-display="push" class="carousel_image_video">
+            <h2 class = "text-danger">SCHOOL</h2>
+            <hr>
+            <h3>Announcement</h3>
+            <hr>
+            <h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;List of Announcement</h5>
+
+            <h3>Calender</h3>
+            <hr>
+            <a href="#calender"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;View Calender</h5></a>
+
+            <h3>Fees History</h3>
+            <hr>
+            <h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Outstanding Fees</h5>
+            <a href="#fees_Payment_History"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Fees Payment History</h5></a>
+
+            <h3>School Bus</h3>
+            <hr>
+            <h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Bus Details</h5>
+
+            <h3>Time Table</h3>
+            <hr>
+            <a href="#time_table"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;View Time Table</h5></a>
+
+            <h3>Directory</h3>
+            <hr>
+            <a href="#giis_Directory"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;GIIS Directory</h5></a>
+
+
+        </section><!-- School panel -->
+
+        <section data-role="panel" id="academic_Panel" data-position="left" data-display="push" class="carousel_image_video">
+            <h2 class="text-danger">ACADEMICS</h2>
+            <hr>
+            <h3>Assignments</h3>
+            <hr>
+            <h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;List of Assignments</h5>
+
+            <h3>Homework</h3>
+            <hr>
+            <h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;List of Homework</h5>
+
+            <h3>Syllabus</h3>
+            <hr>
+            <a href="#list_of_Syllabus"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;List of Syllabus</h5></a>
+
+            <h3>Worksheets</h3>
+            <hr>
+            <a href="#list_of_Worksheet"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;List of Worksheets</h5></a>
+
+            <h3>Exam And Results</h3>
+            <hr>
+            <a href="#view_result"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;List Results</h5></a>
+
+
+        </section><!-- Academic panel -->
+
+        <section data-role="panel" id="write_to_us_Panel" data-position="left" data-display="push" class="carousel_image_video">
+            <h2 class="text-danger">WRITE TO US</h2>
+            <hr>
+            <h3>Messaging</h3>
+            <hr>
+            <a href="#inbox_Parent"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Inbox ( Parent )</h5></a>
+            <a href="#inbox_Child"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Inbox ( Child )</h5></a>
+            <a href="#sent_Email"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Sent Mails</h5></a>
+            <a href="#write_To_Teacher"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Email Teachers</h5></a>
+            <a href="#email_staff"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Email Staff</h5></a>
+            <a href="#email_Admin"><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;Email Admin</h5></a>
+
+            <h3>Achievements</h3>
+            <hr>
+            <a href=""><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;View/Post Achievements</h5></a>
+
+            <h3>Compliments</h3>
+            <hr>
+            <a href=""><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;View/Post Compliments</h5></a>
+
+            <h3>Feedback/Complaints</h3>
+            <hr>
+            <a href=""><h5><span class = "glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;View/Post Feedback/Complaints</h5></a>
+
+
+        </section><!-- Write to us panel -->
+
+        <section data-role="panel" id="inbox_Parent_Panel" data-position="left" data-display="push" class="panel carousel_image_video">
+            <div class="row">
+
+                <section class="col-md-12 col-xs-12 alert alert-info">
+                    <button class="btn btn-xs btn-warning panel_edit_button" data-role="none">Edit</button>
+                </section>
+
+                <section class="col-md-12 col-xs-12 alert alert-success">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-7"><p>GIIS Announcement</p></div>
+                        <div class="col-md-6 col-xs-5 text-right"><h6>2 Dec 2015</h6></div>
+                        <div class="col-md-12 col-xs-12"><h5><span class = "glyphicon glyphicon-eye-close"></span> Invitation for Thyagaraja Aradhna</h5></div>
+                        <div class="col-md-12 col-xs-12"><h4><small>Debugging session with browser was closed.</small></h4></div>
+                    </div><!--End of ROW-->
+                </section><!-- ( ng-repeat here )-->
+
+            </div><!--End of ROW-->
+        </section><!-- inbox Parent panel -->
+        
+         <div data-role="panel" id="inbox_Child_Panel" data-position="left" data-display="push" class="panel carousel_image_video">
+            <div class="row">
+                <section class="col-md-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            Select Child:
+                        </div>
+
+                        <div class="col-md-6 col-xs-6">
+                            <select data-role="none">
+                                <option>Child-1</option>
+                                <option>Child-2</option>
+                            </select>
+                        </div>
+
+                    </div><!--End of ROW-->
+
+                </section><!--Select Child Section-->
+
+                <section class="col-md-12 col-xs-12 alert alert-info">
+                    <button class="btn btn-xs btn-warning panel_edit_button" data-role="none">Edit</button>
+                </section><!--Edit row Section-->
+
+            </div><!--End of ROW-->    
+
+            <div class="row">
+
+                <section class="col-md-12 col-xs-12 alert alert-success">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-7"><p>GIIS Announcement</p></div>
+                        <div class="col-md-6 col-xs-5 text-right"><h6>2 Dec 2015</h6></div>
+                        <div class="col-md-12 col-xs-12"><h5><span class = "glyphicon glyphicon-eye-close"></span> Invitation for Thyagaraja Aradhna</h5></div>
+                        <div class="col-md-12 col-xs-12"><h4><small>Debugging session with browser was closed.</small></h4></div>
+                    </div><!--End of ROW-->
+                </section><!-- ( ng-repeat here )-->
+
+            </div><!--End of ROW-->
+        </div><!-- inbox Child panel -->
+        
+        <div data-role="panel" id="sent_email_Panel" data-position="left" data-display="push carousel_image_video" class="panel">
+            <div class="row">
+                <section class="col-md-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            Sort By:
+                        </div>
+
+                        <div class="col-md-6 col-xs-6">
+                            <select data-role="none">
+                                <option>Date-1</option>
+                                <option>Date-2</option>
+                            </select>
+                        </div>
+
+                    </div><!--End of ROW-->
+
+                </section><!--Select Child Section-->
+
+                <section class="col-md-12 col-xs-12 alert alert-info">
+                    <button class="btn btn-xs btn-warning panel_edit_button" data-role="none">Edit</button>
+                </section><!--Edit row Section-->
+
+            </div><!--End of ROW-->    
+
+            <div class="row">
+
+                <section class="col-md-12 col-xs-12 alert alert-success">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-7"><p>GIIS Announcement</p></div>
+                        <div class="col-md-6 col-xs-5 text-right"><h6>2 Dec 2015</h6></div>
+                        <div class="col-md-12 col-xs-12"><h5><span class = "glyphicon glyphicon-eye-close"></span> Invitation for Thyagaraja Aradhna</h5></div>
+                        <div class="col-md-12 col-xs-12"><h4><small>Debugging session with browser was closed.</small></h4></div>
+                    </div><!--End of ROW-->
+                </section><!-- ( ng-repeat here )-->
+
+            </div><!--End of ROW-->
+        </div><!-- Sent Email Panel -->
+
+
+        <!--Handle All Panel-->
+
+
+
+        <div class="row">
+
+            <section class="col-sm-1 col-xs-2 nopadding">
+
+                <div class="row index_menu_up">
+                    <div class="col-md-12 col-xs-12" id="profile"><img src="img/imgProfile_blk.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12"><a href="#home"><img src="img/home.png" class="index_verticle_menu_icon_img"/></a></div>
+                    <div class="col-md-12 col-xs-12" id="school"><img src="img/school.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12" id="academic"><img src="img/academic.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12"><img src="img/media.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12" id="write_to_us"><img src="img/write_to_us.png" class="index_verticle_menu_icon_img"/></div>
+                </div><!--End of UP Menu's ROW-->
+
+
+
+                <div class="row index_quick_links">
+                    <div class="col-md-12 col-xs-12"><img src="img/home.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12"><img src="img/school.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12"><img src="img/academic.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12"><img src="img/media.png" class="index_verticle_menu_icon_img"/></div>
+                    <div class="col-md-12 col-xs-12"><img src="img/write_to_us.png" class="index_verticle_menu_icon_img"/></div>
+                </div><!--End of Lower ( Quick Links ) Menu's ROW-->
+
+            </section><!--End of Left verticle Menu section--->
+
+            <section class="col-sm-11 col-xs-10 nopadding">
+
+                <div class="row index_horizontal_header">
+                    <div class="col-md-12 col-xs-12 nopadding"> 
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-1 text-center"><h6><img src="img/imgOptionsIOS7_old.png" class="index_header_three_bars"/></h6></div>
+                            <div class="col-xs-5 col-sm-5 text-center">
+                                <h6>&nbsp;&nbsp;<img src="img/iGIISLogo.png" class="index_header_logo"/></h6>
+                            </div><!--Endof Heading-->
+                            <div class="col-xs-2 col-sm-3">
+                                <h6>Esther Simon<br><small>QueenStown</small></h6>
+                            </div><!--User and Campus Info-->
+
+                            <div class="col-xs-3 col-sm-3">
+                                <h6><img src="img/imgInfo.png"/></h6>
+                            </div><!--User and Campus Info-->
+                        </div><!--End of ROW-->
+                    </div><!--End of HEader Section--->
+
+
+                    <div class="col-md-12 col-xs-12  nopadding img_Header_Branding"> 
+                        <img src="img/imgHeaderBranding.png" class="img_Header_Branding">
+                    </div><!--End of Header Brand Image--->
+
+                </div><!--End of Header--->
+
+                <!--ng-view body start--->
+
+
+                <div class="col-sm-12 col-xs-12 ng_view_style nopadding" ng-view="" >
+
+
+                </div>
+
+                <!--ng-view body End--->
+
+            </section><!--End of ng-view -->
+        </div><!---End OF Main ROW--->
+
+        <!--Main App JAVASCRIPT-->
+        <script src="js/app.js"></script>
+        <!--Main App JAVASCRIPT-->
+
+    </body>
+</html>

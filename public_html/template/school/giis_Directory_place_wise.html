@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>GIIS-Directory-Surat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body class="container-fluid">
+
+        <div class="row">
+
+            <section class="col-md-12">
+                <h3>GIIS Directory Surat</h3>
+            </section>
+            <section class="col-md-12">
+                <hr>
+            </section>
+
+            <section class="col-md-12 text-right">
+                <button class="btn btn-xs btn-warning" id="hide_button">Hide Search</button>
+            </section>
+
+            <section class="col-md-12 col-xs-12" id="search_Fields_place_wise">
+
+                <div class="row">
+
+                    <div class = "panel panel-default">
+                        <div class = "panel-heading">
+                            <h3 class = "panel-title">
+                                Advance Search
+                            </h3>
+                        </div><!--End of Panel Title-->
+
+                        <div class = "panel-body">
+
+                            <div class="row">
+
+                                <div class="col-md-2 col-xs-6">Name :</div>
+                                <div class="col-md-2 col-xs-6"><input type="text"/></div>
+                                <div class="col-md-2 col-xs-6">Job Title/Post :</div>
+                                <div class="col-md-2 col-xs-6"><input type="text"/></div>
+                                <div class="col-md-2 col-xs-6">Branch :</div>
+                                <div class="col-md-2 col-xs-6">
+                                    <select>
+                                        <option>Branch 1</option>
+                                        <option>Branch 2</option>
+                                        <option>Branch 3</option>
+                                    </select>
+                                </div>
+                            
+
+                                <div class="col-md-2 col-xs-6">Department :</div>
+                                <div class="col-md-2 col-xs-6">
+                                    <select>
+                                        <option>Department 1</option>
+                                        <option>Department 2</option>
+                                        <option>Department 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2 col-xs-6">Staff/Teacher :</div>
+                                <div class="col-md-2 col-xs-6">
+                                    <select>
+                                        <option>Teacher 1</option>
+                                        <option>Teacher 2</option>
+                                        <option>Teacher 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4 col-xs-12"><button class="btn btn-xs btn-warning">Search All</button> <button class="btn btn-xs btn-warning">View All</button></div>
+
+                            </div><!---End of ROW-->
+
+                        </div><!--End of Panel Body--->
+
+                    </div><!--End of Panel-->
+
+                </div><!--End of ROW-->
+            
+            </section><!--End of Search Section-->
+
+            <section class="col-md-12">
+                <h4>Staff Information</h4>
+            </section>
+
+            <section class="col-md-12">
+
+                <table class = "table table-striped">
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row">
+
+                                    <div class="col-md-2 col-xs-6">
+                                        <img src="http://www.globalschoolsfoundation.org/Portals/34/images/GIIS-IMW-Power-Packed-Curriculum.jpg"/>
+                                    </div>
+                                    <div class="col-md-2 col-xs-6">
+                                        <h4>Aditi Chakraborty</h4>
+                                        <h5>Head Marketing</h5>
+                                        <h6>Marketing</h6>
+                                    </div>
+
+                                    <div class="col-md-3 col-xs-12">
+                                        <p> <span class = "glyphicon glyphicon-earphone"></span> : 063-676355</p>
+                                        <p> <span class = "glyphicon glyphicon-envelope"></span> : aditi.chakraborty@globalindianschool.org</p>
+                                    </div>
+
+                                </div><!--End of Main ROW-->
+
+                            </td>
+                        </tr>
+
+                        
+                    </tbody>
+
+                </table>
+
+
+            </section><!--Staff Section-->
+
+
+
+
+        </div><!--End of Main Row-->
+
+        <script>
+            $("#hide_button").click(function () {
+                $("#search_Fields_place_wise").toggle("slow");
+                $(this).html("<a>" + ($(this).text() == "Hide Search" ? "Show Search" : "Hide Search") + "</a>");
+            });
+
+        </script>
+
+    </body>
+</html>
